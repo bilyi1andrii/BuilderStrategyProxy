@@ -1,10 +1,12 @@
-package com.example.task2;
+package com.example.mail;
 
-import com.example.task2.mailcode.MailCode;
+import com.example.mail.mailcode.MailCode;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 @AllArgsConstructor
+@Getter
 public class MailInfo {
     private Client client;
     private MailCode mailCode;
@@ -17,7 +19,5 @@ public class MailInfo {
     public String getEmail() {
         return client.getEmail();
     }
-
-
 
 }

@@ -1,6 +1,6 @@
-package com.example.task2.mailcode;
+package com.example.mail.mailcode;
 
-import com.example.task2.Client;
+import com.example.mail.Client;
 
 public class BirthdayCode implements MailCode {
 
