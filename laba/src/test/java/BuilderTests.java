@@ -5,7 +5,7 @@ import com.example.builder.Student;
 import java.time.LocalDate;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Assertions;
 
 public class BuilderTests {
 
@@ -27,13 +27,13 @@ public class BuilderTests {
                 .height(HEIGHT)
                 .build();
 
-        assertAll(
-                () -> assertEquals(FIRST_NAME, student.getFirstName()),
-                () -> assertEquals(LAST_NAME, student.getLastName()),
-                () -> assertEquals(DOB, student.getDob()),
-                () -> assertEquals(GRADES, student.getGrades()),
-                () -> assertEquals(MICE, student.getMice()),
-                () -> assertEquals(HEIGHT, student.getHeight())
+        Assertions.assertAll(
+                () -> Assertions.assertEquals(FIRST_NAME, student.getFirstName()),
+                () -> Assertions.assertEquals(LAST_NAME, student.getLastName()),
+                () -> Assertions.assertEquals(DOB, student.getDob()),
+                () -> Assertions.assertEquals(GRADES, student.getGrades()),
+                () -> Assertions.assertEquals(MICE, student.getMice()),
+                () -> Assertions.assertEquals(HEIGHT, student.getHeight())
         );
     }
 
