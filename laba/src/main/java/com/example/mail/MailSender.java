@@ -33,12 +33,14 @@ public class MailSender {
 
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(email));
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(mailInfo.getEmail()));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress
+                   .parse(mailInfo.getEmail()));
             message.setSubject("Subject: " + mailInfo.getMailCode());
             message.setText(mailInfo.generate());
 
             Transport.send(message);
-            System.out.println("Email sent successfully to " + mailInfo.getEmail());
+            System.out.println("Email sent successfully to "
+            + mailInfo.getEmail());
 
         } catch (MessagingException e) {
             e.printStackTrace();
