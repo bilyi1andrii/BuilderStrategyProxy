@@ -28,7 +28,8 @@ public class BuilderTests {
                 .build();
 
         Assertions.assertAll(
-                () -> Assertions.assertEquals(FIRST_NAME, student.getFirstName()),
+                () -> Assertions.assertEquals(FIRST_NAME,
+                student.getFirstName()),
                 () -> Assertions.assertEquals(LAST_NAME, student.getLastName()),
                 () -> Assertions.assertEquals(DOB, student.getDob()),
                 () -> Assertions.assertEquals(GRADES, student.getGrades()),
